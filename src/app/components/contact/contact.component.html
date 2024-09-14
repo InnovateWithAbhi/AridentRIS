@@ -1,0 +1,80 @@
+<section
+  class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-24 pb-12 px-6 md:px-12 min-h-screen flex flex-col justify-center"
+>
+  <div class="max-w-screen-xl mx-auto text-center">
+    <h2
+      class="text-4xl md:text-5xl leading-tight mb-6 text-gray-900 dark:text-white"
+    >
+      Get in Touch with
+      <span class="text-orange-500 dark:text-orange-600">AridentRIS</span>
+    </h2>
+    <p class="text-lg md:text-xl mb-8 text-gray-700 dark:text-gray-300">
+      Have any questions or inquiries? We're here to help you grow your business
+      digitally. Feel free to reach out to us!
+    </p>
+
+    <!-- Contact Form -->
+    <div
+      class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg max-w-screen-sm mx-auto"
+    >
+      <form (submit)="onSubmit()">
+        <div class="mb-6">
+          <label
+            for="name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Your Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="contactForm.name"
+            name="name"
+            autocomplete="name"
+            class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-orange-500 focus:border-orange-500"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Your Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="contactForm.email"
+            name="email"
+            autocomplete="email"
+            class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-orange-500 focus:border-orange-500"
+            placeholder="example@example.com"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Your Message</label
+          >
+          <textarea
+            id="message"
+            [(ngModel)]="contactForm.message"
+            name="message"
+            rows="4"
+            class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-orange-500 focus:border-orange-500"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-6 py-3 text-center transition ease-in-out duration-300 focus:outline-none focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-600"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
